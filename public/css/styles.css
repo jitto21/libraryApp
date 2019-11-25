@@ -165,3 +165,72 @@ a,a:hover {
 .btn-twitter:hover {background-color:#3088FF;color:#62BBFF;}
 .btn-facebook:hover {background-color:#2A4998;color:#4C6BBA;}
 .btn-google-plus:hover {background-color:#C23836;color:#E45A58;}
+                            
+                                  /*FORM*/ 
+
+input{
+  width: 66%;
+  margin: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family:'Oswald',arial narrow,sans-serif;
+  font-size:16px;
+
+  letter-spacing:.08em;
+  border-radius: 15px;
+}
+
+input:hover{
+  border:double;
+}
+
+.form-class{
+  padding: 20px;
+  width: auto;
+}
+
+#submit-btn{
+  border: none;
+  border-radius: 5px;
+  padding:7px 10px 7px 10px;
+  background-color: #111166;
+  font-family:'Oswald';
+  font-size: 18px;
+  color: white;
+}
+
+#submit-btn:hover{
+  background-color: #000044 ;
+  
+}
+
+#submit-btn-id{
+  text-align: center;
+  width: 66%;
+}
+
+.form-label{
+  padding-left: 20px;
+  margin: 7px;
+  color:#000044;
+  font-family:'Oswald',arial narrow,sans-serif;
+  font-size: 17px;
+}
+
+                                          /*ACCOUNT*/
+
+.account-btn{
+  border: none;
+  border-radius: 5px;
+  padding:7px 10px 7px 10px;
+  background-color: #111166;
+  font-family:'Oswald';
+  font-size: 18px;
+  color: white;
+  float:right;
+  margin: 5px;
+}
+.account-btn:hover{
+  background-color: #000044 ;
+  
+}

@@ -43,8 +43,11 @@ function router(nav){
     })
     booksRouter.route('/save')
     .post((req,res)=>{
+        var i = books.length-1;
         console.log(req.body);
-       res.send("SUbmitted"); 
+        books[++(i)]=req.body;
+        books[i].image = "default.jpg";
+        res.render("addbooks.ejs",{nav,title:'Add a Book'})
     })
 
 booksRouter.route('/:id')

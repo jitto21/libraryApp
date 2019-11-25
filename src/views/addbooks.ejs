@@ -93,14 +93,15 @@
           
           
           <!--/stories-->
-            <form action="/books/save" method="POST">
-                Title <input type="text" name="title">
-                Genre <input type="text" name="genre">
-                Author <input type="text" name="author">
-                <button name="submit" >SUBMIT</button>
+          <div class="form-class">
+            <form action="/books/save" method="POST" id="form-input">
+                <div class="form-label">Title</div> <input type="text" name="title" required>
+                <div class="form-label">Author</div> <input type="text" name="author" required>
+                <div class="form-label">Genre</div> <input type="text" name="genre" >
+          </div>
+                <div id="submit-btn-id"><button id="submit-btn" name="submit" >SUBMIT</button></div>
 
             </form>
-
           <!--/stories-->
           
           
