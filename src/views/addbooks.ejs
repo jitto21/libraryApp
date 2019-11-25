@@ -95,9 +95,9 @@
           <!--/stories-->
           <div class="form-class">
             <form action="/books/save" method="POST" id="form-input">
-                <div class="form-label">Title</div> <input type="text" name="title" required>
-                <div class="form-label">Author</div> <input type="text" name="author" required>
-                <div class="form-label">Genre</div> <input type="text" name="genre" >
+                <div class="form-label">Title</div> <input class = "title" type="text" name="title" required>
+                <div class="form-label">Author</div> <input class = "author" type="text" name="author" required>
+                <div class="form-label">Genre</div> <input class = "genre" type="text" name="genre" required>
           </div>
                 <div id="submit-btn-id"><button id="submit-btn" name="submit" >SUBMIT</button></div>
 
@@ -159,6 +159,18 @@
 </footer>
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(()=>{
+        $("#submit-btn").click(()=>{
+          var title = $("#title").val().trim();
+          var author = $("#author").val().trim();
+          var genre = $("#genre").val().trim();
+          if(title!="" && author!="" ){
+            alert("Book Details Submitted");
+          }
+        })
+      })
+    </script>
 	</body>
 </html>

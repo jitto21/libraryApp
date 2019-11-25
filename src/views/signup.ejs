@@ -32,7 +32,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
           <ul class="dropdown-menu" style="padding:12px;">
             <form class="form-inline">
-              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button>
             </form>
           </ul>
         </li>
@@ -161,9 +161,18 @@
                     var pass = $('#password').val().trim()
                     var re_pass = $('#re-password').val().trim()
                     console.log(pass+" "+re_pass);
-                    if(pass[0]!=pass[1]){
-                        alert("Passwords mismatch")
+                    if($("#form-input:empty").length == 0 && pass==re_pass){
+                      console.log("...Entered saved");
+                      alert("Details Saved. You can login to your account")
                     }
+                    else if(pass!=re_pass){
+                      console.log("...Entered not saved");
+
+                        alert("Details incorrect, Fill it Again")
+                        $('#form-input').trigger('reset');
+                    }
+                    
+            
                 });            
             })
         </script>

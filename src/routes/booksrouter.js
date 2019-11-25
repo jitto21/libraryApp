@@ -47,7 +47,7 @@ function router(nav){
         console.log(req.body);
         books[++(i)]=req.body;
         books[i].image = "default.jpg";
-        res.render("addbooks.ejs",{nav,title:'Add a Book'})
+        res.render("books.ejs",{nav,title:'Books',books})
     })
 
 booksRouter.route('/:id')

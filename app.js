@@ -42,15 +42,18 @@ var accounts=[];
         var flag =-1;
         var login = req.body;
         console.log(login);
+        
         for(var i=0;i<accounts.length;i++){
             if(login.username == accounts[i].username && login.password == accounts[i].password){
                 res.send("Logged into "+accounts[i].username);
+               
                 flag = 0;
+                console.log(flag+" = flag")
+                
             }
         }
          if(flag == -1){
-            res.send("Error")
-        }    
+            res.send("Error, No such user");        }    
     })
 
     app.post('/accounts/validate-signup',(req,res)=>{
